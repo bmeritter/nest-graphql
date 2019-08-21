@@ -10,7 +10,8 @@
     "start:prod": "node dist/main.js",
     "build": "yarn run prestart:prod",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json -c tslint.json"
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "generate-graphql": "swagger-to-graphql --swagger=url > ./src/test/test.graphql"
   },
   "dependencies": {
     "@nestjs/common": "^6.5.3",
@@ -34,6 +35,7 @@
     "nodemon": "^1.19.1",
     "prettier": "1.17.0",
     "supertest": "4.0.2",
+    "swagger-to-graphql": "^2.0.1",
     "ts-node": "8.1.0",
     "tsc-watch": "2.2.1",
     "tsconfig-paths": "3.8.0",
