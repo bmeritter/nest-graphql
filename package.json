@@ -5,9 +5,11 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "format": "prettier --write \"src/**/*.ts\"",
     "start": "nodemon ./src/dev.ts",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js",
+    "build": "yarn run prestart:prod",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json -c tslint.json"
   },
   "dependencies": {
