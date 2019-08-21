@@ -1,0 +1,7 @@
+type Empty {
+    empty: String
+}
+
+type Query{
+    test: Empty
+}
